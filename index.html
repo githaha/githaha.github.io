@@ -61,6 +61,139 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-OC_StringAbout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/13/OC_StringAbout/" class="article-date">
+  <time datetime="2014-10-13T06:17:58.000Z" itemprop="datePublished">Oct 13 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: OC_StringAbout<br>date: 2014-10-13 12:14:12</p>
+<h2 id="tags:OC_String">tags:OC_String</h2>
+<p><img src="http://ico.ooopic.com/ajax/iconpng/?id=96921.png" alt=""><img src="http://ico.ooopic.com/ajax/iconpng/?id=96921.png" alt=""><img src="http://ico.ooopic.com/ajax/iconpng/?id=96921.png" alt=""></p>
+<h3 id="1-字符串格式化输出">1.字符串格式化输出</h3>
+<h4 id="－stringWithFormat">－stringWithFormat</h4>
+<ul>
+<li>NSString *formaStr = [NSString stringWithFormat :”I am zhang %d,and I am %d years old!”];</li>
+<li>NSLog(@”%@”,formaStr);</li>
+</ul>
+<h3 id="2-字符串长度">2.<em>字符串长度</em></h3>
+<h4 id="—-length">—-length</h4>
+<h5 id="NSString_*string01_=_@”Hello,world”;">NSString *string01 = @”Hello,world”;</h5>
+<h5 id="//NSLog(@”%lu”,[string01_length]);">//NSLog(@”%lu”,[string01 length]);</h5>
+<h5 id="NSUInteger__length_=_[string01_length]">NSUInteger _length = [string01 length]</h5>
+<h5 id="NSLog(@”%lu”,_length);">NSLog(@”%lu”,_length);</h5>
+<h3 id="3-字符串比较">3.<em>字符串比较</em></h3>
+<h5 id="*_3-1———只比较两个字符串是否相同，相同输出1，不同输出0">* 3.1———只比较两个字符串是否相同，相同输出1，不同输出0</h5>
+<h5 id="NSString_string02_=_@”Happy_birthday!”">NSString string02 = @”Happy birthday!”</h5>
+<h5 id="NSString_string02_=_@”Happy_new_year!”">NSString string02 = @”Happy new year!”</h5>
+<h5 id="isEqualToString———">isEqualToString———</h5>
+<h5 id="BOOL_result01_=_[string01_isEqualToString:string02]">BOOL result01 = [string01 isEqualToString:string02]</h5>
+<h5 id="NSLog(@”result01_=_%@”,result01);">NSLog(@”result01 = %@”,result01);</h5>
+<h5 id="*_3-2———不区分大小写比较">* 3.2———不区分大小写比较</h5>
+<h6 id="NSString_string03_=_@”HAPPY_BIRTHDAY!”;">NSString string03 = @”HAPPY BIRTHDAY!”;</h6>
+<h5 id="if([string01_caseInsenstiveCompare:string02]_==_NSOrderedSame){">if([string01 caseInsenstiveCompare:string02] == NSOrderedSame){</h5>
+<pre><code><span class="built_in">NSLog</span>(@<span class="string">"string01 is equal to string03"</span>);
+</code></pre><p>}</p>
+<h5 id="或者：">或者：</h5>
+<h5 id="if([string01_compare:string03_option:NSCaseInsentiveSearch_==_NSOrderedSame]){">if([string01 compare:string03 option:NSCaseInsentiveSearch == NSOrderedSame]){</h5>
+<pre><code><span class="built_in">NSLog</span>(@<span class="string">"string01 is equal to string03"</span>);
+</code></pre><p>}<br><img src="http://pic.sucaiw.com/up_files/tubiao/317b2a4c94/20081114122647592.png" alt=""></p>
+<h3 id="4-改变字符串的大小写－－－－－">4.<em>改变字符串的大小写</em>－－－－－</h3>
+<h4 id="*4-1把字符串改为大写－－－uppercaseString">*4.1把字符串改为大写－－－uppercaseString</h4>
+<p>NSString *string04 = [string01 uppercaseString];<br>NSLog(@”string04 = %@”,string04);</p>
+<h4 id="*4-2把字符串改为小写－－－lowercaseString">*4.2把字符串改为小写－－－lowercaseString</h4>
+<p>NSString *string05 = [string04 lowercaseString];<br>NSLog(@”string05 = %@”,string05);</p>
+<h3 id="5-判断字符串是否含有后缀——hasSuffix—-">5.判断字符串是否含有后缀——hasSuffix—-</h3>
+<h4 id="NSString_*filename01_=_@”fistname-txt”;">NSString *filename01 = @”fistname.txt”;</h4>
+<h4 id="if([filename01_hasSuffix:@”-txt”])">if([filename01 hasSuffix:@”.txt”])</h4>
+<pre><code>    <span class="built_in">NSLog</span>(@<span class="string">"filename01 has suffix with .txt"</span>);
+</code></pre><h3 id="6-判断字符串是否含有前缀——hasprefix—-">6.判断字符串是否含有前缀——hasprefix—-</h3>
+<h4 id="NSString_*filename02_=_@”studentManagement-c”;">NSString *filename02 = @”studentManagement.c”;</h4>
+<h4 id="if([filename02_hasprefix:@”student”])">if([filename02 hasprefix:@”student”])</h4>
+<pre><code>    <span class="built_in">NSLog</span>(@<span class="string">"filename01 has prefix with student"</span>);
+</code></pre><h3 id="7-提取字符串－－－－substringFromIndex—-从字符串的第index位置开始提取，包括第index位">7.提取字符串－－－－substringFromIndex—-从字符串的第index位置开始提取，包括第index位</h3>
+<h4 id="NSString_*string06;">NSString *string06;</h4>
+<h4 id="string06_=［string01_substringFromIndex:3］;">string06 =［string01 substringFromIndex:3］;</h4>
+<h4 id="NSLog(@”string06_=_%@”,string06);">NSLog(@”string06 = %@”,string06);</h4>
+<h3 id="8-提取字符串－－－－substringToIndex—-提取字符串的第0位置开始提取到index位置为止，并且不包括index位">8.提取字符串－－－－substringToIndex—-提取字符串的第0位置开始提取到index位置为止，并且不包括index位</h3>
+<h4 id="NSString_*string07;">NSString *string07;</h4>
+<h4 id="string07_=［string01_substringToIndex:3］;">string07 =［string01 substringToIndex:3］;</h4>
+<h4 id="NSLog(@”string07_=_%@”,string07);">NSLog(@”string07 = %@”,string07);</h4>
+<p><img src="http://z.k1982.com/png/up/200711/20071127234939165.png" alt=""></p>
+<h3 id="9-提取字符串－－－－substringWithRang:NSMakeRange()—-从字符串的第6位置开始提取长度为5的字符串">9.提取字符串－－－－substringWithRang:NSMakeRange()—-从字符串的第6位置开始提取长度为5的字符串</h3>
+<h4 id="NSString_*string08;">NSString *string08;</h4>
+<h4 id="string06_=［string01_substringWithRang:NSMakeRang(6,5)］;">string06 =［string01 substringWithRang:NSMakeRang(6,5)］;</h4>
+<h4 id="NSLog(@”string08_=_%@”,string08);">NSLog(@”string08 = %@”,string08);</h4>
+<h3 id="10-求文件的扩展名">10.求文件的扩展名</h3>
+<h4 id="NSString_filename03_=@”~/hello-txt”;">NSString filename03 =@”~/hello.txt”;</h4>
+<h4 id="NSLog(@”filename03_文件的扩展名是：%@”,[filename03_pathExtension]);_//extension,延长；expand,扩展">NSLog(@”filename03 文件的扩展名是：%@”,[filename03 pathExtension]);   //extension,延长；expand,扩展</h4>
+<h3 id="11-文件的相对路径_转_为绝对路径－－－stringByExpandingTildeInPath——-">11.文件的相对路径 转 为绝对路径－－－stringByExpandingTildeInPath——-</h3>
+<h4 id="NSString_*path01_=_@”~/hello-txt”;">NSString *path01 = @”~/hello.txt”;</h4>
+<h4 id="NSString_*absPath_=_[path01_stringByExpandingTildeInPath];">NSString *absPath = [path01 stringByExpandingTildeInPath];</h4>
+<h4 id="NSLog(@”absPath_=_%@”,absPath);">NSLog(@”absPath = %@”,absPath);</h4>
+<h3 id="12-文件的绝对路径_转_为相对路径－－－stringByAbbreviatingWithTildeInPath——-">12.文件的绝对路径 转 为相对路径－－－stringByAbbreviatingWithTildeInPath——-</h3>
+<h4 id="NSString_*path02_=_@”/Users/qingyun/hello-txt”;">NSString *path02 = @”/Users/qingyun/hello.txt”;</h4>
+<h4 id="NSString_*Path_=_[path02_stringByAnnreviatingWithTildeInPath];">NSString *Path = [path02 stringByAnnreviatingWithTildeInPath];</h4>
+<h4 id="NSLog(@”Path_=_%@”,Path02);">NSLog(@”Path = %@”,Path02);</h4>
+<p><img src="http://attimg.dospy.com/img/day_091202/20091202_e0539f9a91436eb8e309U1hGukbP24G7.png" alt=""><img src="http://attimg.dospy.com/img/day_091202/20091202_e0539f9a91436eb8e309U1hGukbP24G7.png" alt=""><img src="http://attimg.dospy.com/img/day_091202/20091202_e0539f9a91436eb8e309U1hGukbP24G7.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/10/13/OC_StringAbout/" data-id="pjf1chc79omuvnsz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-oc_字符串操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/13/oc_字符串操作/" class="article-date">
+  <time datetime="2014-10-13T04:12:40.000Z" itemprop="datePublished">Oct 13 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="oc中字符串操作">oc中字符串操作</h1>
+<p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"></p>
+<p><img src="http://25.io/smaller/img/smaller_256x256.png" alt="Mou icon"><br><img src="http://img.sc115.com/uploads/png/110125/201101251528272912.png" alt="Mou icon"></p>
+<p><img src="http://img.sc115.com/uploads/png/110125/201101251528272912.png" alt="mou icon"></p>
+<h1 id="strongfd"><em>strongfd</em></h1>
+<p><a href="http://192.com" target="_blank" rel="external">http://192.com</a></p>
+<h2 id="online_code_and_Block">online code <em>and</em> Block</h2>
+<hr>
+<h2 id="————-">————-</h2>
+<ul>
+<li>how are you!</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/10/13/oc_字符串操作/" data-id="5dtx28uw3xf0y6u7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-MAC上搭建hexo方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/10/06/MAC上搭建hexo方法/" class="article-date">
@@ -128,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/06/MAC上搭建hexo方法/" data-id="7k8u15e3l1wkrinc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/10/06/MAC上搭建hexo方法/" data-id="f771mvtidem84otl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,7 +286,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10">October 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10">October 2014</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -163,6 +296,14 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/10/13/OC_StringAbout/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/13/oc_字符串操作/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2014/10/06/MAC上搭建hexo方法/">MAC上搭建hexo方法</a>
